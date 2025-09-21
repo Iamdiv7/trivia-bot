@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Question</title>
+</head>
+<body>
+    <h1>Trivia Question</h1>
+    <p>{{ question }}</p>
+
+    {% if feedback %}
+        <p><strong>{{ feedback }}</strong></p>
+    {% endif %}
+
+    <form action="/answer" method="post">
+        <input type="text" name="topic" placeholder="Your answer" required>
+        <button type="submit">Submit Answer</button>
+    </form>
+
+    <a href="/">Try another topic</a>
+</body>
+</html>
